@@ -53,14 +53,12 @@ Set up backend:
 bash
 cd backend
 npm install
-cp .env.example .env # Configure your environment variables
+cp .env.example .env
 npm run dev
 
 Set up frontend:
 bash
 cd ../frontend
 npm install
-cp .env.example .env # Set VITE_API_URL
+cp .env.example .env
 npm run dev
-
-test-change from team-member-1 branch to main branch
