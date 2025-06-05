@@ -1,0 +1,117 @@
+/* YearbookSearch.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3d3d3d;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .yearbook-container {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .wrapper{top: 0px;}
+  
+  .search-box {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 20px;
+    width: 50%;
+    max-width: 1200px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 70%
+  }
+  
+  .title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+    position: relative;
+    width: auto;
+    padding: 20px;
+    font-size: 2.4rem;
+  }
+  
+  .title::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: var(--theme-red);
+    margin: 5px auto;
+  }
+  
+  .search-heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--theme-red);
+    font-size: 2.4rem;
+    margin-top: 20px;
+  }
+  
+  .subtext {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .search-form {
+    margin: auto;
+    width: 80%;
+    padding: 30px;
+  }
+  
+  .search-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #3d3d3d;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .search-btn {
+    width: auto;
+    background-color: var(--theme-red);
+    border-radius: 0 5px 5px 0;
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .filter-btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #3d3d3d;
+  }
+  
+  .filter-btn:hover {
+    background-color: #ddd;
+  }
+  
+
+  
+  @media only screen and (max-width:778px) {
+
+    .title {font-size: 26px;padding-top: 0;}
+    .search-heading {font-size: 26px;}
+    .subtext {font-size: 22px;}
+    .search-input {font-size: 16px;}
+    .search-form {width: 100%;padding: 10px;}
+    .search-box {width: 85%;padding: 30px 20px;}
+    .filter-btn {font-size: 14px;}
+    .yearbook-container {padding: 10px;}
+  }

@@ -1,0 +1,54 @@
+footer{background-color: var(--theme-dark);color: #fff;}
+footer .footerWrapper{padding-top:30px ;padding-bottom: 30px;}
+
+footer .footer-logo{max-width: 150px;}
+footer h3{color: #fff;font-weight: 400;font-size: 22px;font-family:  "Istok Web", sans-serif;text-align: center;}
+
+
+footer  .heading h2{font-size: 28px;font-weight: 700;color:#fff;margin-bottom: 4px;}
+footer  .heading p{font-size: 20px;font-weight: 400;}
+footer  .heading .icon svg{margin-right: 6px;}
+
+footer .part1,.part2,.part3,.part4{padding: 0px 3rem!important;}
+footer .part1 { max-width: 18% !important;padding-right: 5px!important;}
+footer .part2{padding-left: 5px!important;}
+
+footer .heading a{color: #fff;text-decoration: none;}
+
+/* footer .part2,.mapImg{max-height: 125px;} */
+@media only screen and (max-width: 1280px) {
+    footer .part1,.part2,.part3,.part4{padding:0  1.5rem!important;}
+    footer .part1 { justify-content: flex-start!important;}
+    footer .part1 { max-width: 25% !important;padding:0px 1rem!important;}
+    footer  .heading h2{font-size: 26px;margin-bottom: 3px;}
+    footer  .heading p{font-size: 18px;}
+    
+}
+
+@media only screen and (max-width: 1160px) {
+    
+    
+    footer .part1,.part2,.part3,.part4{padding:0 0.5rem 0 1rem!important;}
+    /* footer .heading h2{height: 90px;} */
+    
+    
+  }
+
+@media only screen and (max-width: 992px) {
+
+    
+  }
+
+@media only screen and (max-width: 778px) {
+
+   
+    footer .part2,.part3,.part4{padding: 20px!important;}
+    footer .part1 { max-width: 100% !important;padding: 5px!important;flex-direction: row!important;}
+    footer .part3 .heading p{padding-top: 10px;}
+
+}
+@media only screen and (max-width:380px) {
+  footer{padding: 0 10px;}
+  footer .footerWrapper{margin: auto;}
+  footer .part2,.part3,.part4{padding: 10px!important;}
+}

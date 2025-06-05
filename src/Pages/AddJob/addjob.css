@@ -1,0 +1,125 @@
+.job-container {
+    width: 1000px;
+    margin: auto; 
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    background: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .job-heading{
+    font-size: 25px; 
+    text-align: center;
+    color: var(--theme-dark);
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .job-heading::after{
+    display: none;
+  }
+  .addjob {
+    display: block;
+    flex-direction: column;
+  }
+  
+  .addjob label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 13px;
+  }
+  
+  .addjob input,
+  .addjob textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .addjob textarea {
+    height: 150px; 
+    resize: vertical;
+  }
+  .job-Info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 100px; 
+  }
+  
+  .job-details{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 70px;
+  }
+  .job-time{
+    font-size: 7px;
+    color: blue;
+  }
+  .job-date-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10% ;
+  }
+  
+  .job-date-container div {
+    width: 48%;
+  }
+  
+  .job-submit {
+    margin-top: 35px;
+    padding: 10px;
+    background:  var(--theme-red);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    display: block;
+    text-align: center !important;
+    width: 20%;
+  }
+  .job-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+  
+  .job-submit:hover {
+    background: #a00000;
+  }
+  
+  .job-required{
+    color: red;
+  }
+  
+  
+  @media (max-width: 768px) {
+
+    .job-container{
+        width: 100%;
+    }
+    .job-date-container {
+      flex-direction: row; 
+      gap: 10px;
+    }
+  
+    .job-date-container div {
+      width: 48%;
+    }
+  .job-details{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+  }
+   
+    .job-submit {
+      width: 30% !important 
+    }
+  }
+  

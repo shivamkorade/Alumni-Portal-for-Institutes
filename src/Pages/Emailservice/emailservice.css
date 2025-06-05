@@ -1,0 +1,151 @@
+.emailservice-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.emailservice-form {
+    margin-top: 30px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.emailservice-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+}
+
+
+.emailservice-ield-group {
+    display: flex;
+    flex-direction: column; 
+    flex: 1; 
+    min-width: 150px;
+}
+.emailservice-form label {
+    font-weight: bold;
+    color: var(--theme-red);
+}
+
+.emailservice-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.emailservice-form button {
+    background:  var(--theme-red);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px auto;
+    width: 15%;
+    text-align: center;
+}
+
+.emailservice-form .emailservice-note {
+    text-align: center;
+    color:  var(--theme-red);
+    font-size: 18px;
+}
+
+/* Table styling */
+.email-records {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: -20px;
+    table-layout: fixed;
+    margin-bottom: 40px;
+}
+.email-records-title{
+    text-align: center;
+    margin: 60px;
+    color: var(--theme-red);
+    position: relative;
+    font-weight: bold;
+}
+
+.email-records-title::after {
+    content: "";
+    display: block;
+    width: 5%; 
+    height: 2px;
+    background-color:  var(--theme-red);
+    margin: 10px auto 0; 
+}
+
+.email-records th,
+.email-records td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+
+.email-records th{
+    background-color: var(--theme-red);
+   
+}
+
+
+.email-records td{
+    height:50px;
+}
+
+
+@media screen and (max-width: 768px) {
+   
+    .emailservice-form {
+        width: 95%; 
+        padding: 15px;
+    }
+
+    .emailservice-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .emailservice-field-group {
+        width: 100%; 
+    }
+
+    .emailservice-form button {
+        width: 100%; 
+        padding: 12px;
+    }
+
+   
+    .email-records {
+        width: 100%;
+        overflow-x: auto; 
+        display: block; 
+    }
+
+    .email-records-title {
+        margin: 30px; 
+        font-size: 20px;
+    }
+
+    .email-records th, 
+    .email-records td {
+        font-size: 14px; 
+        padding: 8px;
+    }
+
+    .email-records-title::after {
+        width: 20%; 
+    }
+}

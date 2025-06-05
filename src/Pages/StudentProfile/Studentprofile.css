@@ -1,0 +1,287 @@
+/* General Styles */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f5f5f5;
+  }
+
+  .contactDetails{display: none;}
+  
+  .bg-img{filter: brightness(0.5);}
+  .contact-card a{text-decoration: none;}
+  .contact-card svg{font-size: 26px;}
+
+  .stud-profile-container {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    position: relative;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 6px 20px rgb(0, 0 ,0 ,0.15);
+  }
+
+  .profile-header .options {align-content: center;border-radius: 50%;width: auto!important;margin-left: auto;margin-right: 3rem;position: relative;}
+
+  .circle-icon {
+    display: inline-flex;
+    align-content: center;
+    padding: 8px; 
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Set width */
+    height: 40px; /* Same height for a circle */
+    border-radius: 50%; /* Makes it a circle */
+    background-color: rgba(193, 193, 193, 0.623); /* Optional background, adjust as needed */
+    color: white; /* Icon color */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  .profile-header .options .optionsIcons span{width: 20px;height: 20px;}
+  .profile-header .options .optionsIcon svg{color: grey;}
+
+  .profileInfoWrpper {padding: 10px 90px;}
+  
+  .stud-profile-img{height: 200px!important;width: auto;    margin-right: 10px;}
+
+  .stud-profile-img img {
+ 
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Crop and fit the image to the container */
+    border-radius: 50%;
+    border: 4px solid #fff;
+  }
+
+  .profile-info {width: auto;}
+  
+  .profile-info h2 {
+    text-align: left;
+    font-weight: 700;
+    color: black;
+    margin: 10px 0;
+    font-size: 36px;
+  }
+  
+  .profile-info p {
+    text-align: left;
+    font-weight: 700;
+    color: black;
+    margin: 5px 0;
+    font-size: 24px;
+  }
+  
+  .social-links{
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-weight: 700;
+    width: auto;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  /* Content Area */
+  .content-container {
+    padding: 20px;
+  }
+  
+  /* Contact Info */
+  .contact-card {
+    background-color:#fff ;
+   
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: grey;
+    text-decoration: none;
+    font-size: 22px;
+    width: 90%;
+    margin-left: auto;
+
+  }
+  
+  /* Cards */
+  .card {
+    border: none;
+    background-color: #D9D9D926;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+  }
+  
+  .card h4 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+  }
+  .card .card-content img{border-radius:16px ;}
+
+  .institute-logo,
+  .experience-logo {
+    border-radius: 50%;
+    padding: 12px;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .card .cardtextWrapper{width: 55%;}
+
+  .card .cardtextWrapper h5{font-family: Verdana, Geneva, Tahoma, sans-serif;font-size:26px;}
+  .card .cardtextWrapper p{font-size: 20px;font-weight: 500;}
+
+  .card .btn-add span{color: white;background-color: #EB3223;border-radius: 50%;width: 30px;height: 30px;display: inline-flex;justify-content: center;align-items: center;margin: 5px;}
+  
+  /* Add Button */
+  .btn-add {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: #fff;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: black;
+    border: none;
+    padding: 2px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .left{padding: 5rem 3rem;width: 30%;}
+
+  .right{width: 75%;padding: 3rem;padding-right: 8rem;}
+  
+  /* Dropdown Wrapper */
+.dropdown-menu-custom {
+  position: absolute;
+  top: 60%;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 5px;
+  padding: 8px 0;
+  z-index: 1000;
+  width: 160px;
+  left: 50%;
+  transform: translateX(-50%) !important;
+
+  /* Hide by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show dropdown with animation */
+.dropdown-menu-custom.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Button Styles */
+.dropdown-menu-custom button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-menu-custom button:hover {
+  background-color: #f5f5f5;
+}
+
+@media only screen and (max-width:1280px) {
+  .contact-card{font-size: 18px;}
+  .social-links {gap: 20px;}
+  .social-links a{font-size: 20px;}
+  .social-links p{font-size: 20px;text-align: center;}
+  .circle-icon {width: 30px;height: 30px;}
+  .circle-icon svg{font-size: 1.3rem;}
+  .card .cardtextWrapper h5 {font-size: 22px;}
+  .institute-logo, .experience-logo {max-width: 220px;max-height: 220px;}
+  .right {padding-right: 5rem;}
+  .stud-profile-img img {max-width: 240px;max-height: 240px;}
+  .left{padding: 5rem 2rem;}
+  .profile-header .options{margin-right: 2rem;}
+}
+
+@media only screen and (max-width:992px) {
+  .profile-info h2 {font-size: 28px;margin: 5px 0;}
+  .profile-info p {font-size: 20px;}
+
+  .profileInfoWrpper {padding: 10px 0px;padding-left: 10px;}
+  .stud-profile-img img {max-width: 220px;max-height: 220px;}
+  .left{width: 38%;padding-right: 0.2rem;}
+  .right {padding-right: 2rem;}
+  .dropdown-menu-custom {left: auto;}
+  /* .profile-header .options{margin:auto} */
+  
+}
+
+@media only screen and (max-width:778px) {
+  .stud-profile-img img {
+    max-width: 100px;
+    max-height: 100px;
+}
+.stud-profile-img{height: auto!important;width: auto!important;}
+.profile-info{width: 160%;}
+.profile-info h2 {font-size: 21px;margin: 5px 0;}
+.profile-info p {font-size: 16px;}
+.left{display: none;}
+.right{width: 100%;padding: 1rem!important;}
+.social-links{display: none;}
+.card{padding: 20px 10px;}
+.card h4{font-size: 20px;}
+.card .cardtextWrapper{width: 100%;}
+.card .cardtextWrapper p{font-size: 14px;}
+.card .cardtextWrapper h5{font-size: 16px;font-family: "Popppins",sans-serif;}
+.institute-logo, .experience-logo  {max-width: 100px;max-height: 100px;padding: 0px;}
+.options{    margin-left: auto;}
+.card .btn-add span{width: 20px;height: 20px;}
+.card .btn-add{font-size: 14px;}
+.card .btn-add span svg{font-size: 20px;}
+.options button{padding: 0;}
+.contactDetails{ display: flex;justify-content: center;flex-direction: column;}
+.contactDetails p{font-size: 14px;}
+.contactDetails button{ justify-content: flex-start!important; text-transform: none!important;font-weight: 700!important;font-size: 16px!important;font-family: 'Inria Sans'!important;padding: 0 5px;margin: 0;}
+.contact-dropdown{left: auto;top: 98%; display: flex;flex-direction: column;width: max-content;transform: translateX(0)!important;}
+.contactDetails span{width: auto;}
+.contact-dropdown a{padding: 0 10px;    text-align: left;
+    text-decoration: none;}
+}
+
+@media only screen and (max-width:280px) {
+  .dropdown-menu-custom{width: fit-content;}
+  .options button {font-size: 14px;width: max-content;padding: 10px;}
+}

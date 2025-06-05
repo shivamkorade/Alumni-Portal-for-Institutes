@@ -1,0 +1,174 @@
+
+
+.database-container {
+    width: 1000px;
+    max-width: 1200px;
+    margin:   auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.database-header {
+    margin-top: 50px;
+    position: relative; 
+   margin-bottom: 130px; 
+    justify-content: space-between;
+}
+
+
+.database-h1 {
+    text-align: center;
+    font-size: 24px;
+    position: absolute;
+    color:var(--theme-red);
+    font-weight: bold;
+}
+
+.database-h1::after {
+    content: "";
+    display: block;
+    width: 10%; 
+    height: 2px;
+    background-color: var(--theme-red);
+    margin-left: 45%;
+}
+.database-recent-actions {
+    color:var(--theme-red);
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 191, 255); 
+    cursor: pointer;
+    position: absolute;
+    right: 10; 
+    text-align: right;
+    padding-right: calc((100% - 1000px) / 2);
+    margin-top: 55px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.database-section{
+    margin-top: -18px;
+}
+
+.database-section-title {
+    width: calc(100% + 40px); 
+    background: none; 
+    background: linear-gradient(to right, var(--theme-dark), var(--theme-red));
+    color: white;
+    padding: 10px;
+    text-align: left;
+    margin-left: -20px; 
+    box-sizing: border-box; 
+    font-size: 20px;
+}
+
+.database-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    color: var(--theme-red);;
+    border-bottom: 1px solid #898888;
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+.database-section ul li:last-child {
+    margin-bottom: 30px;
+}
+.database-button-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 260px;
+    gap: 5px;
+}
+
+.database-icon-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+
+}
+
+
+.database-add-button, .database-change-button {
+    background-color:var(--theme-red);
+    color: white;
+    border: none;
+   padding: 4px 15px; 
+    margin: 0;
+    cursor: pointer;
+    border-radius: 30px;
+    width: auto;  
+}
+
+.database-add-button:hover, .database-change-button:hover {
+    background-color: #a00000;
+}
+
+
+.database-add-icon {
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    padding: 2px;
+    margin-right: 5px;
+}
+.database-edit-icon{
+    color: darkgoldenrod;
+}
+
+@media (max-width: 768px) {
+    .database-h1{
+        margin-top: 5px;
+        font-size: 20px;
+    }
+    .database-recent-actions{
+        margin-top: 60px;
+        font-size: 15px;
+        margin-left: 0px;
+        text-align: right;
+        padding-right: 5%;
+    }
+   
+    .database-container{
+        width: 90%;
+        margin-top: 120px;
+        max-width: 100vw; 
+        overflow-x: hidden; 
+    }
+    .database-section{
+        margin-bottom: 10px;
+    }
+    .database-section-title{
+        font-size: 13px;
+    }
+    .database-item{
+        font-size: 11px;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .database-section ul {
+        padding-left: 0; 
+        margin-left: 0; 
+    }
+    .database-button-row {
+        
+        margin-left: 60px;
+        gap: 3px; 
+        min-width: 85px; /
+    }
+    .database-add-button,
+    .database-change-button {
+        padding: 3px 5px; 
+        font-size: 10px; 
+        white-space: nowrap; 
+    }
+}

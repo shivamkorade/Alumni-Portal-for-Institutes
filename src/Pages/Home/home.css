@@ -1,0 +1,99 @@
+.bg-image{height:100%!important}
+.floatTitle{width: 40%!important;left: 15%!important; transform: translateY(-50%);background-color: var(--theme-red)!important;z-index: 2!important;padding: 2rem 3rem;}
+.floatTitle p{font-size: 2rem;font-weight: 700;}
+.floatTitle h2{font-size: 4.2rem;}
+.shortDesc{transform: translateY(-50%);}
+
+.imageShowcaseWrapper{background-color: var(--theme-green);padding: 50px;}
+.imageShowcaseWrapper p{font-weight: 900;font-size: 105px;font-family: "Inter", sans-serif;color: white;text-transform: uppercase;line-height: 90px;transform: translateY(-90px) ;padding-left: 5px;}
+
+.ctaWrapper{background-color: var(--theme-dark);color: #fff;text-align: center;padding: 45px 80px;}
+.ctaWrapper h3{ text-align: center;font-size: 26px;justify-content: center;display: flex;
+font-weight: 700;text-transform: uppercase;font-family: "Poppins", sans-serif;font-size: 34px;padding: 15px 0;text-align: center;min-height: 60px;height: 100px;}
+.ctaWrapper p{font-weight: 700;font-size: 26px;font-family: "Poppins", sans-serif;}
+
+.ctaWrapper .ctaIcon{font-size:140px;}
+
+.ctaWrapper a{text-decoration: none;width: min-content;color: white;}
+
+.tpoDescWrapper{padding: 70px;}
+.tpoDescWrapper .imgBG{background-color: var(--theme-dark);}
+.tpoDescWrapper img{transform: translateX(-10px) translateY(10px);}
+.tpoDescWrapper h3{font-family: "Poppins", sans-serif;}
+
+.profile-container {position: relative;width: fit-content;margin: auto;/* padding: 20px; */background:var(--theme-dark);}
+
+.tpoDescWrapper h3{font-size: 36px;font-weight: 700;}
+.tpoDescWrapper p{font-size: 26px;font-weight: 600;font-family: "Poppins", sans-serif;}
+.tpoDescWrapper h4{font-size: 26px;font-weight: 700;font-family: "Poppins", sans-serif;text-align: center;margin-top: 25px;}
+.tpoDescWrapper .designation{font-weight: 400!important;font-size: 20px!important;}
+
+.profile-img {position: relative;z-index: 1;display: block;max-width: 330px;}
+
+@media only screen and (max-width: 1160px) {
+    
+    .ctaWrapper{padding: 25px 0px;}
+    .ctaWrapper .ctaIcon{font-size:100px;}
+    .ctaWrapper h3{font-size: 28px;}
+    .ctaWrapper p{font-size: 20px;}
+
+    .tpoDescWrapper{padding: 60px;}
+    .tpoDescWrapper h3{font-size: 30px;}
+    .tpoDescWrapper p{font-size: 24px;}
+    .tpoDescWrapper h4{font-size: 24px;}
+    .shortDesc{transform: translateY(-40%);}
+    
+  }
+
+@media only screen and (max-width: 992px) {
+    .floatTitle p{font-size: 1.4rem;font-weight: 700;}
+    .floatTitle h2{font-size: 3.2rem;}
+    .floatTitle{padding: 20px;}
+
+    .imageShowcaseWrapper p{font-size: 74px;line-height: 70px;transform: translateY(-70px) ;}
+
+    .ctaWrapper .ctaIcon{font-size:90px;}
+    .ctaWrapper h3{font-size: 26px;}
+    .ctaWrapper p{font-size: 18px;}
+
+    .tpoDescWrapper{padding: 40px;}
+    .tpoDescWrapper h3{font-size: 28px;}
+    .tpoDescWrapper p{font-size: 20px;}
+    .tpoDescWrapper h4{font-size: 20px;}
+
+    .shortDesc{transform: translateY(-30%);}
+    
+    
+  }
+
+  @media only screen and (max-width:778px) {
+    .floatTitle{width: 65%!important;left: 7%!important;padding: 15px 20px!important;}
+    .floatTitle h2{margin-bottom: 0;font-size: 2.4rem;}
+    .floatTitle .hometxt{padding: 0!important;margin-bottom: 5px;font-size: 1.3rem;font-weight: 500;}
+
+    .shortDesc {transform: translateY(-15%); }
+    .shortDesc strong{font-family: "Arial", sans-serif!important;font-weight: 700!important;}
+
+    .ctaWrapper h3{height: 50px;}
+    .ctaWrap{flex-direction: column;margin: auto;}
+    .ctaWrapper a {width: 70%;padding-bottom: 20px;}
+
+    .tpoDescWrapper{margin: auto!important;padding: 20px ;  }
+    .tpoDescWrapper img{  transform: translateX(-5px) translateY(5px);}
+    .tpoDescWrapper h3{padding: 25px 0 0 0!important;font-size: 22px;}
+    .tpoDescWrapper p{font-size: 16px;}
+
+    .imageShowcaseWrapper {padding: 40px 20px;}
+    .imageShowcaseWrapper p{font-size: 28px;line-height:30px ;transform: translateY(-30px);padding-left: 2px; }
+
+    .infoWrapper{display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 0 10px;}
+    .infoWrapper .designation {font-size: 16px!important;}
+    .profileWrapper{display: flex;}
+
+  }
+
+  @media only screen and (max-width:380px) {
+    .ctaWrapper a {width: max-content;padding: 0px!important;}
+
+  }
+

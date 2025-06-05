@@ -1,0 +1,185 @@
+button{text-transform: none;}
+.bgImg{filter: brightness(0.5);}
+
+
+.admin-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Background Image */
+  .bgImg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  
+  /* Header on Top */
+  .header {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 2; /* Ensures header is on top */
+  }
+  .header h2{width: fit-content;margin: auto;font-weight: 700;font-size: 36px;}
+  
+  /* Optional: Add a dark overlay for better contrast */
+  .bgImg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .navbar-container{background-color: var(--theme-red);}
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 1rem;
+  }
+  
+  .nav-btn {
+    display: flex!important;
+    justify-content: center!important;
+    background-color: #fff!important;
+    color: var(--theme-red)!important;
+    border: none!important;
+    padding: 4px 20px!important;
+    margin: 5px!important;
+    border-radius: 30px!important;
+    text-decoration: none!important;
+    font-size: 22px!important;font-weight: 600!important;
+    cursor: pointer!important;
+    width: 200px!important;
+    text-transform: none!important;
+    font-family: "Inria Sans", sans-serif!important;
+  }
+
+  
+  .nav-btn.active {
+    background-color: #ffffff00!important;
+    color: white!important;
+  }
+  
+
+
+   /* Active state - apply half underline */
+   .nav-btn.active::after {
+    content: ""!important;
+    position: absolute!important;
+    left: 50%!important; /* Start from the middle */
+    bottom: 6px!important;
+    width: 40%!important; /* Half width */
+    height: 3px!important;
+    color: white!important;
+    background-color: #ffffff!important; /* Active underline color */
+    transform: translateX(-50%)!important; /* Shift back to the center */
+    transition: all 0.3s ease-in-out!important;
+  }
+  
+  /* Banner */
+  .banner {
+    background: url("/assets/banner.jpg") no-repeat center/cover;
+    height: 150px;
+  }
+  
+  /* Form Container */
+  .form-container {
+    width: 60%;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Styles */
+  .event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .event-form label {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .event-form input,
+  .event-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .event-form textarea {
+    height: 120px;
+  }
+  
+  .date-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .date-container div {
+    width: 48%;
+  }
+  
+  .btn-submit {
+    background-color: #7c0c0c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .btn-submit:hover {
+    background-color: #ff4d4f;
+  }
+
+  .dropdwn-btn{width: auto!important;color:var(--theme-red)!important;background-color: white!important;min-width: unset!important;}
+
+  @media only screen and (max-width:1280px) {
+    .nav-btn {font-size: 20px!important;padding: 4px 10px!important;width: 190px!important;}
+  }
+  
+  @media only screen and (max-width:992px) {
+    .nav-btn {font-size: 18px!important;padding: 4px 10px!important;width: 180px!important;}
+    .nav-links{gap: 0.5rem;} 
+      
+  
+  }
+  @media only screen and (max-width:778px) {
+    .nav-btn {font-size: 14px!important;padding: 4px 5px!important;width: 170px!important;}
+    .nav-links{gap: 0.4rem;padding: 10px;} 
+    .header h2 {font-size: 26px;}
+  
+  }
+
+  @media only screen and (max-width:380px) {
+ 
+    .nav-btn {font-size: 12px!important;padding: 4px!important;width: 120px!important;margin: 0!important;height: 50px!important;border-radius: 4px!important;display: flex!important;align-items: center!important;}
+    .nav-links{gap: 8px!important;padding: 12px!important;} 
+    .dropdwn-btn {height: 50px;}
+    .header h2 {font-size: 22px;}
+  }
+  

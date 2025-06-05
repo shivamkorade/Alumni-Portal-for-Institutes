@@ -1,0 +1,130 @@
+.addmail-title {
+    margin-top: 5%;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--theme-red);
+    margin-bottom: 20px;
+    text-align:left;
+    width: 100%;
+    margin-left: 28%;
+    padding-left: 0;
+}
+
+.addmail-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.addmail-title::after {
+    content: "";
+    display: block;
+    width: 8%;
+    height: 3px;
+    background-color: var(--theme-red);
+    position: absolute;
+    left: 30%; 
+}
+
+  
+  .addmail-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .addmail-label {
+    font-size: 16px;
+    font-weight: bold;
+    color:  var(--theme-red);
+    margin: 10px 0 5px;
+    text-align: left;
+  }
+  
+  .addmail-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .addmail-input2{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .addmail-button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap:10px;
+  }
+  
+  .addmail-button {
+    background:  var(--theme-red);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 13px;
+    white-space: nowrap;
+    width: auto;
+    min-width: fit-content; 
+  }
+  
+  .addmail-button:hover {
+    background: #a52a2a;
+  }
+  .mailrequired{
+    color: red;
+  }
+  @media (max-width: 768px) {
+    .addmail-container {
+      max-width: 95%;
+      padding: 10px;
+    }
+  
+    .addmail-title {
+      font-size: 20px;
+    }
+
+    .addmail-title::after{
+        width: 30%;
+        left: 35%;
+    }
+  
+    .addmail-label {
+      font-size: 14px;
+    }
+  
+    .addmail-input {
+      font-size: 14px;
+      padding: 6px;
+    }
+  
+    .addmail-button {
+      font-size: 10px;
+      padding: 8px;
+    }
+  
+  .addmail-button-group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 10px;
+   
+
+  }
+  .addmail-button-group button:nth-child(3) {
+    grid-column: span 2;
+  }
+  }

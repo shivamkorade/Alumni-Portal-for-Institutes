@@ -1,0 +1,188 @@
+
+
+.pendingheading{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color:  var(--theme-dark);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.registration-card {
+    display: flex;
+    padding: 20px;
+    width: 800px;
+    border: 1px solid rgb(138, 138, 138);
+    margin: 0px auto;
+    background-color: white;
+    align-items: stretch;
+}
+.registration-card:last-child {
+    margin-bottom: 10%;
+}
+
+.reg-card-left-section {
+    display: flex;
+    align-items: center; 
+}
+
+.reg-card-profile-pic img {
+    width: 90px;
+    height: 90px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-right: 20px;
+    align-self: center; 
+}
+
+
+.reg-card-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+    font-weight: bold
+}
+
+.reg-card-user-info h2, .reg-card-user-info p, .user-info a {
+    margin: 0;
+}
+.reg-card-user-info h2{
+    font-size: 23px;
+    font-weight: bold
+}
+.reg-card-user-info a {
+    color: #076ba0;
+    text-decoration: none;
+   
+    font-weight: bold
+}
+
+.reg-card-user-info a:hover {
+    text-decoration: underline;
+}
+
+
+.reg-card-divider {
+    width: 2px;
+    background-color: black;
+    margin: 0 15px;
+}
+
+.reg-card-right-section {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.reg-card-right-section p,
+.reg-card-right-section a {
+    margin: 0; 
+    font-weight: bold
+}
+.reg-card-linkedin-link {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.reg-card-linkedin-icon {
+    color: #0077b5; 
+    font-size: 36px; 
+    margin-right: 8px;
+}
+
+.reg-card-linkedin-text {
+    font-size: 18px;
+    color: #0077b5;
+    font-weight: bold;
+}
+
+
+.reg-card-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* Styling the buttons */
+.reg-card-approve, .reg-card-decline {
+    background-color:  #228B22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer !important;
+    margin-bottom: 10px;
+    text-align: center;
+    white-space: nowrap ;
+    width: auto; 
+    display: inline-block;
+}
+
+.reg-card-decline {
+    background-color:  rgb(102, 15, 15);
+}
+
+.reg-card-approve:hover {
+    background-color: #006400;
+}
+
+.reg-card-decline:hover {
+    background-color: var(--theme-red);
+}
+.reg-card-bold{
+    font-weight: bold;
+}
+.reg-card-light{
+    color: grey;
+}
+@media (max-width: 768px) {
+    .registration-card {
+        width: 95%;
+        padding: 15px;
+        flex-direction: column; 
+    }
+
+    .pendingheading {
+        font-size: 26px;
+    }
+
+    .reg-card-profile-pic img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .reg-card-user-info h2 {
+        font-size: 18px;
+    }
+
+    .reg-card-user-info p, .reg-card-linkedin-text {
+        font-size: 14px;
+    }
+
+    .reg-card-linkedin-icon {
+        font-size: 28px;
+    }
+
+    .reg-card-approve, .reg-card-decline {
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    .reg-card-divider {
+        height: 2px;
+        width: 100%;
+        background-color: black;
+        margin: 10px 0;
+    }
+
+    .reg-card-right-section {
+        margin-top: 15px;
+    }
+}

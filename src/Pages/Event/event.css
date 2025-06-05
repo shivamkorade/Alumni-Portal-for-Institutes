@@ -1,0 +1,134 @@
+.alumni-container {
+    width: 60%;
+    margin: auto;
+    padding: 30px 5%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 65px;
+    margin-bottom: 65px;
+  }
+  
+  .alumni-form {
+    display: block;
+    flex-direction: column;
+  }
+  
+  .alumni-form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--theme-red);
+  }
+  
+  .alumni-form input,
+  .alumni-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .alumni-form textarea {
+    height: 150px; 
+    resize: vertical;
+  }
+  
+  .alumni-date-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .alumni-date-container div {
+    width: 48%;
+  }
+  
+  .alumni-submit {
+    margin-top: 15px;
+    padding: 10px;
+    background: var(--theme-red);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    text-align: center !important;
+    width: 20%;
+  }
+  .alumni-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+  
+  .alumni-submit:hover {
+    background: #a00000;
+  }
+  
+  .alumni-required{
+    color: red;
+  }
+  .alumni-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 16px;
+  }
+  
+  .alumni-file-upload  {
+    flex-grow: 1;
+    color: #777;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+  
+  .alumni-browse-btn {
+    background: #adadad;
+    color: #000000 !important;
+    padding: 8px 15px;
+    border-radius: 20px;
+    width: 20%;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .alumni-browse-btn input {
+    display: none;
+  }
+  
+  .alumni-browse-btn:hover {
+    background: #6d6d6d;
+  }
+  
+  @media (max-width: 768px) {
+    .alumni-container{
+      width: 100%;
+    }
+    .alumni-date-container {
+      flex-direction: row; 
+      gap: 10px;
+    }
+  
+    .alumni-date-container div {
+      width: 48%;
+    }
+  
+    .alumni-browse-btn {
+      width: 30%;
+    }
+  
+    .alumni-submit {
+      width: 30% !important ;
+    }
+  }
+  
