@@ -6,7 +6,7 @@ import App from './App.jsx'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from './Context/AuthContext.jsx';
-
+import { Toaster } from "react-hot-toast";
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
@@ -19,6 +19,10 @@ createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <BrowserRouter>
         <App />
+        <Toaster
+            position="top-center"
+            reverseOrder={false}
+        ></Toaster>
       </BrowserRouter>
     </AuthProvider>
   // </React.StrictMode>

@@ -5,6 +5,8 @@ import { Close } from "@mui/icons-material";
 
 import "./login.css";
 
+import { requestPasswordReset } from "../../services/operations/resetPasswordAPI";
+
 
 export default function Signup() {
 
@@ -36,8 +38,8 @@ export default function Signup() {
   
   const [forgotPasswordData, setForgotPasswordData] = useState({
     email: "",
-    newPassword: "",
-    confirmPassword: "",
+    // newPassword: "",
+    // confirmPassword: "",
   });
 
 
@@ -58,13 +60,21 @@ export default function Signup() {
     console.log("Form Submitted:", formData);
     handleLogin(formData);
   };
+
   const handleForgotPasswordSubmit = (e) => {
     e.preventDefault();
-    if (forgotPasswordData.newPassword !== forgotPasswordData.confirmPassword) {
-      alert("Passwords do not match!");
+    // if (forgotPasswordData.newPassword !== forgotPasswordData.confirmPassword) {
+    //   alert("Passwords do not match!");
+    //   return;
+    // }
+    if (!forgotPasswordData.email) {
+      alert("Email is required!");
       return;
     }
-    console.log("Password reset for:", forgotPasswordData);
+
+    requestPasswordReset(forgotPasswordData);
+
+    console.log("Password reset email sent :", forgotPasswordData);
     setShowForgotPassword(false); // Close modal after submission
   };
 
@@ -125,7 +135,7 @@ export default function Signup() {
           onChange={handleForgotPasswordChange} 
         />
 
-        <label>New Password <span className="signin-required">*</span></label>
+        {/* <label>New Password <span className="signin-required">*</span></label>
         <input 
           type="password" 
           className="signin-input" 
@@ -143,7 +153,7 @@ export default function Signup() {
           placeholder="Re-enter new password" 
           required 
           onChange={handleForgotPasswordChange} 
-        />
+        /> */}
 
         <button type="submit" className="forget-btn">Submit</button>
       </form>
