@@ -6,7 +6,7 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
 import GroupsIcon from '@mui/icons-material/Groups';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import tpoImg from '../../assets/images/tpo_compressed.png'
+import tpoImg from '../../assets/images/TPO.jpeg'
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -85,7 +85,7 @@ const Home = () => {
               <img src={tpoImg} alt="Profile" className="profile-img"/>
           </div>
           <div className="infoWrapper">
-            <h4>Prof. Akash Shrivastava</h4>
+            <h4>Dr. Rahul K Undegaonkar</h4>
             <p className='text-center designation'>TPO, In-Charge, Alumni Cell</p>
           </div>
           

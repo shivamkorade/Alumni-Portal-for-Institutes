@@ -9,7 +9,7 @@ export const sendOTP = async (personalEmail, navigate) => {
   const toastId = toast.loading("Loading...");
 
   try {
-    const response = await apiConnector("POST", SENDOTP_API, {email});
+    const response = await apiConnector("POST", SENDOTP_API, {email: personalEmail});
 
     console.log("Send OTP API response.", response);
 
@@ -67,7 +67,7 @@ export const signUp = async (data, navigate) => {
   }
 };
 
-// Login function
+// Login function - IMPROVED VERSION
 export const logIn = async (formData, navigate) => {
     const toastId = toast.loading("Loading...");
 
@@ -84,11 +84,31 @@ export const logIn = async (formData, navigate) => {
 
         // Add token to the localStorage
         localStorage.setItem("token", JSON.stringify(response?.data?.token));
-        // localStorage.setItem("user", JSON.stringify(response?.data?.data));
+        
+        // Store user data if available
+        if (response?.data?.data) {
+            localStorage.setItem("user", JSON.stringify(response?.data?.data));
+        }
+        
+        // Navigate to home page after successful login
+        if (navigate) {
+            navigate("/");
+        }
+        
+        // Return success response for the component to handle
+        return {
+            success: true,
+            user: response?.data?.data,
+            token: response?.data?.token,
+            message: "Login successful"
+        };
         
     } catch (error) {
         console.error("LOGIN API error.", error);
         toast.error(error.response?.data?.message || "Login failed.");
+        
+        // Return error response
+        throw new Error(error.response?.data?.message || "Login failed.");
 
     } finally {
       toast.dismiss(toastId);
