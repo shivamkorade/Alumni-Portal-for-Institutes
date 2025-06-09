@@ -1,4 +1,4 @@
-.jobsearch-container {
+.career-container {
   margin: 5% auto;
   display: flex;
   flex-direction: column;
@@ -11,27 +11,27 @@
   border-radius: 20px;
 }
 
-.jobsearch-title {
+.career-title {
   font-size: 28px;
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
 }
 
-.jobsearch-subtitle {
+.career-subtitle {
   font-size: 18px;
   color: var(--theme-red);
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.jobsearch-filters {
+.career-filters {
   display: flex;
   gap: 15px;
   justify-content: center;
 }
 
-.jobsearch-dropdown {
+.career-dropdown {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -65,21 +65,21 @@
 }
 
 @media (max-width: 768px) {
-  .jobsearch-container {
+  .career-container {
     width: 90%;
     height: auto;
     padding: 15px;
   }
 
-  .jobsearch-title {
+  .career-title {
     font-size: 22px;
   }
 
-  .jobsearch-subtitle {
+  .career-subtitle {
     font-size: 16px;
   }
 
-  .jobsearch-dropdown {
+  .career-dropdown {
     font-size: 9px;
     width: 90%;
   }

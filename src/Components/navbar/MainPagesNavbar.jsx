@@ -267,7 +267,7 @@ const MainPagesNavbar = () => {
                   >
                     <li>
                       <Link to="" onClick={closeMenu}>
-                        Alumni Events
+                        Events
                       </Link>
                     </li>
                     {/* <li>
@@ -486,7 +486,7 @@ const MainPagesNavbar = () => {
                   }`}
                 >
                   <Link to="">
-                    <li>Alumni Events</li>
+                    <li> Events</li>
                   </Link>
                   {/* <Link to="feed">
                     <li>Campus Feed</li>
