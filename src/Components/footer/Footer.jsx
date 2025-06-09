@@ -46,22 +46,22 @@ const Footer = () => {
               <h2 className='px-2'>Contact Us</h2>
               <hr style={{ border: "2px solid white", width: "100%" ,opacity:1,margin:'0',marginBottom:'5px'}} />
               <p className='py-2'>
-  Prof. Ganesh Wayal
+  Dr. Sarika V. Bodake
   <br />Head Of Dept. (Computer Dept.)
   <br />
   <span>
     <span className='icon d-flex align-items-center'>
-      <CallOutlinedIcon />+91 8275047372 (Phone)
+      <CallOutlinedIcon />+91 90110 64514 (Phone)
     </span>
   </span>
   <br />
-  Mr. Akash Shrivastava
+  Dr. Rahul K Undegaonkar 
   <br />
   TPO, In-charge, Alumni Cell
   <br />
   <span>
     <span className='icon d-flex align-items-center'>
-      <CallOutlinedIcon />+91 9303683660 (Phone)
+      <CallOutlinedIcon />+91 89759 82918 (Phone)
     </span>
   </span>
 </p>

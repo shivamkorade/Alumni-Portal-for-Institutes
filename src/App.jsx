@@ -43,9 +43,9 @@ function App() {
         // console.log("Current User:", user);
         return <GuestHome/>;
        
-      } else if (user?.role === "admin") {
+      } else if (user?.role === "Admin") {
         return <AdminDashboard />;
-      } else if (user?.role === "student") {
+      } else if (user?.role === "Student") {
         return <GuestHome />;
       } else {
         return <GuestHome />; // Fallback if the role is invalid
