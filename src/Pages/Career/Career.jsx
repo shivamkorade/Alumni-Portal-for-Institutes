@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./jobsearch.css"; // Import external CSS
+import "./career.css"; // Import external CSS
 import SearchIcon from '@mui/icons-material/Search';
 
-export default function JobSearch() {
+export default function Career() {
   const [position, setPosition] = useState("Any position");
   const [role, setRole] = useState("Any role");
 
