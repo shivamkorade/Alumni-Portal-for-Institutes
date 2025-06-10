@@ -65,7 +65,7 @@ const ProfileHeader = ({ user }) => {
               <Facebook />Facebook
             </a>
             <a href={user.twitter}  target="_blank" rel="">
-              <Twitter />Twitter
+              <Twitter />Instagram
             </a>
           </div>
             

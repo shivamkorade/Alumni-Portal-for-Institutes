@@ -1,0 +1,50 @@
+.ourstory-container {
+  max-width: 900px;
+  margin: 5% auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.ourstory-title {
+  font-size: 36px;
+  text-align: center;
+  color: var(--theme-red);
+  margin-bottom: 30px;
+}
+
+.ourstory-section {
+  margin-bottom: 40px;
+}
+
+.ourstory-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.ourstory-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.alumni-card {
+  background-color: white;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--theme-red);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.alumni-card h3 {
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.alumni-card p {
+  font-size: 14.5px;
+  color: #444;
+}

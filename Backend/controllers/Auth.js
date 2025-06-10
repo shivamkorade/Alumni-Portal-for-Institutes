@@ -250,12 +250,17 @@ exports.login = async (req, res) => {
     if (!email || !password) {
       return res.status(400).json({
         success: false,
-        message: "All fileds are required.",
+        message: "All fields are required.",
       });
     }
 
-    // Check user is present or not
-    const userDetails = await User.findOne({ email: email });
+    // Check user is present and populate all referenced fields
+    const userDetails = await User.findOne({ email: email })
+      .populate('academicDetails')
+      .populate('contactDetails')
+      .populate('socialMediaAccounts')
+      .populate('jobPost')
+      .exec();
 
     if (!userDetails) {
       return res.status(400).json({
@@ -287,10 +292,33 @@ exports.login = async (req, res) => {
         httpOnly: true,
       };
 
+      // Prepare the response data with populated fields
+      const responseData = {
+        _id: userDetails._id,
+        email: userDetails.email,
+        accountType: userDetails.accountType,
+        workingStatus: userDetails.workingStatus,
+        fullName: userDetails.fullName,
+        enrollmentNo: userDetails.enrollmentNo,
+        mothersName: userDetails.mothersName,
+        spousesName: userDetails.spousesName,
+        gender: userDetails.gender,
+        dateOfBirth: userDetails.dateOfBirth,
+        profilePicture: userDetails.profilePicture,
+        approved: userDetails.approved,
+        token: token,
+        academicDetails: userDetails.academicDetails || null,
+        contactDetails: userDetails.contactDetails || null,
+        socialMediaAccounts: userDetails.socialMediaAccounts || null,
+        jobPost: userDetails.jobPost || [],
+        createdAt: userDetails.createdAt,
+        updatedAt: userDetails.updatedAt
+      };
+
       return res.cookie("token", token, options).status(200).json({
         success: true,
         message: "User logged in successfully.",
-        data: userDetails,
+        data: responseData,
         token: token,
       });
     } else {
@@ -300,10 +328,10 @@ exports.login = async (req, res) => {
       });
     }
   } catch (error) {
-    console.error("Error while log in.", error);
+    console.error("Error while logging in:", error);
     return res.status(500).json({
       success: false,
-      message: "logIn failure! Please try again.",
+      message: "Login failure! Please try again.",
     });
   }
 };

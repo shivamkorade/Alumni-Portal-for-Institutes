@@ -33,7 +33,7 @@ exports.resetPasswordToken = async (req, res) => {
         console.log("Details are", updatedDetails);
         
         // Generate frontend url
-        const url = `http://localhost:5173/update-password/${token}`;
+        const url = `http://localhost:5173/reset/${token}`;
         // we have to update url after deployment
 
         // Send email to user containing the url
