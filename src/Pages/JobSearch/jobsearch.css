@@ -1,5 +1,3 @@
-
-
 .jobsearch-container {
     margin: 5% auto;
     display: flex;
@@ -31,9 +29,6 @@
     display: flex;
     gap: 15px;
     justify-content: center;
-    align-items: center; /* ✅ Add this line */
-    flex-wrap: wrap;
-    
   }
   
   .jobsearch-dropdown {
@@ -76,32 +71,31 @@
         padding: 15px;
     }
 
-    .jobsearch-title {
-        font-size: 22px; 
-    }
+  .jobsearch-title {
+    font-size: 22px;
+  }
 
-    .jobsearch-subtitle {
-        font-size: 16px;
-    }
+  .jobsearch-subtitle {
+    font-size: 16px;
+  }
 
-  
-    .jobsearch-dropdown {
-        font-size: 9px;
-        width: 90%; 
-    }
+  .jobsearch-dropdown {
+    font-size: 9px;
+    width: 90%;
+  }
 
-    .job-search-btn {
-        width: 50px; 
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .job-search-btn {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .job-no-posts {
-        margin-top: 10px;
-        font-size: 14px;
-    }
+  .job-no-posts {
+    margin-top: 10px;
+    font-size: 14px;
+  }
 }
 .job-listings {
   width: 70%;
