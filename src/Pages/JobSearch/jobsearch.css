@@ -31,6 +31,9 @@
     display: flex;
     gap: 15px;
     justify-content: center;
+    align-items: center; /* ✅ Add this line */
+    flex-wrap: wrap;
+    
   }
   
   .jobsearch-dropdown {
@@ -100,3 +103,53 @@
         font-size: 14px;
     }
 }
+.job-listings {
+  width: 70%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-card h3 {
+  color: var(--theme-red);
+  margin-bottom: 8px;
+}
+
+.job-card p {
+  margin: 5px 0;
+  color: #444;
+  font-size: 14px;
+}
+.apply-btn {
+  margin-top: auto;
+  padding: 8px 16px;
+  background-color: var(--theme-red);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.apply-btn:hover {
+  background-color: #c9302c;
+}
+
