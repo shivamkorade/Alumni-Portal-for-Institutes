@@ -73,7 +73,7 @@ function App() {
             <Route path="/jobsearch" element={<JobSearch />} />
             <Route path="/career" element={<Career />} />
             <Route path="/alumni" element={<Alumni />} />
-            <Route path="/reset" element={<Reset />} />
+            <Route path="/reset/:id" element={<Reset />} />
             <Route path="/emailservice" element={<EmailDashboard />} />
             <Route
               path="/pendingregistration"

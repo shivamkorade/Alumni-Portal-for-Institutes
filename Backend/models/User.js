@@ -60,6 +60,7 @@ const userSchema = new mongoose.Schema(
     approved: {
       type: Boolean,
       required: true,
+      default: false,
     },
     token: {
       type: String,
