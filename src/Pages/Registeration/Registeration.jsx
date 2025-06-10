@@ -1,33 +1,44 @@
 import React, { useState } from "react";
 import "./registeration.css";
+import { signUp } from "../../services/operations/authAPI";
+import { useNavigate } from "react-router-dom";
 
 export default function RegistrationForm() {
   const [sameAsCurrent, setSameAsCurrent] = useState(false);
   const [errors, setErrors] = useState({});
 
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
+    accountType: "",
     enrollmentNo: "",
     fullName: "",
-    motherName: "",
+    mothersName: "",
+    spousesName: "",
     gender: "",
-    dob: "",
+    dateOfBirth: "",
     currentAddress: "",
-    personalEmail: "",
+    permanentAddress: "",
+    email: "",
     officialEmail: "",
-    mobile: "",
+    mobileNo: "",
+    alternateMobileNo: "",
     course: "",
     stream: "",
-    admissionYear: "",
-    passingYear: "",
+    yearOfAdmission: "",
+    yearOfPassing: "",
     country: "",
     state: "",
     city: "",
     workingStatus: "",
     linkedIn: "",
+    facebook: "",
+    instagram: "",
+    websites: "",
     profilePicture: null,
-    agreement: false,
+    agreement: false, // See it later
     password: "",
-    confirmpassword: "",
+    confirmPassword: "",
   });
 
   const handleCheckboxChange = () => {
@@ -49,19 +60,19 @@ export default function RegistrationForm() {
     e.preventDefault();
     let newErrors = {};
 
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     if (!formData.profilePicture) {
       newErrors.profilePicture = "Profile picture is required";
     }
   
-    if (!passwordRegex.test(formData.password)) {
-      newErrors.password =
-        "Password must be at least 8 characters long, with at least one uppercase letter, one lowercase letter, one number, and one special character.";
-    }
+    // if (!passwordRegex.test(formData.password)) {
+    //   newErrors.password =
+    //     "Password must be at least 8 characters long, with at least one uppercase letter, one lowercase letter, one number, and one special character.";
+    // }
 
-    if (formData.password !== formData.confirmpassword) {
-      newErrors.confirmpassword = "Passwords do not match.";
+    if (formData.password !== formData.confirmPassword) {
+      newErrors.confirmPassword = "Passwords do not match.";
     }
 
 
@@ -69,6 +80,8 @@ export default function RegistrationForm() {
       setErrors(newErrors); // Update errors state
       return;
     }
+
+    signUp(formData, navigate);
     console.log("Form Submitted:", formData);
   };
 
@@ -82,7 +95,7 @@ export default function RegistrationForm() {
           <div className="reg-half-width">
             <label className="reg-label">
               You are:<span className="reg-required">*</span>
-              <select name="status" required onChange={handleChange}>
+              <select name="accountType" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Student/Alumni
                 </option>
@@ -117,14 +130,14 @@ export default function RegistrationForm() {
               <input
                 type="text"
                 placeholder="Enter Your Father's/Mother's Name"
-                name="motherName"
+                name="mothersName"
                 required
                 onChange={handleChange}
               />
             </label>
             <label className="reg-label">
               Spouse's Name:
-              <input type="text" placeholder="Enter Your Spouse's Name" />
+              <input type="text" name="spousesName" onChange={handleChange} placeholder="Enter Your Spouse's Name" />
             </label>
             <div className="reg-gender-container">
               <label className="reg-gender-label">
@@ -169,7 +182,7 @@ export default function RegistrationForm() {
 
             <label className="reg-label">
               Date of Birth:<span className="reg-required">*</span>
-              <input type="date" name="dob" required onChange={handleChange} />
+              <input type="date" name="dateOfBirth" required onChange={handleChange} />
             </label>
           </div>
           {/* Academic Details */}
@@ -185,7 +198,7 @@ export default function RegistrationForm() {
                 </option>
                 <option value="B.Tech">B.Tech</option>
                 <option value="M.Tech">M.Tech</option>
-                <option value="MBA">MBA</option>
+                <option value="B.Pharm">MBA</option>
               </select>
             </label>
             <label className="reg-label">
@@ -197,11 +210,13 @@ export default function RegistrationForm() {
                 <option value="CSE">CSE</option>
                 <option value="ENTC">ENTC</option>
                 <option value="Mechanical">Mechanical</option>
+                <option value="Civil">Mechanical</option>
+                <option value="Data Science">Mechanical</option>
               </select>
             </label>
             <label className="reg-label">
               Year of Admission:<span className="reg-required">*</span>
-              <select name="admissionYear" required onChange={handleChange}>
+              <select name="yearOfAdmission" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Select Admission Year
                 </option>
@@ -212,7 +227,7 @@ export default function RegistrationForm() {
             </label>
             <label className="reg-label">
               Year of Passing:<span className="reg-required">*</span>
-              <select name="passingYear" required onChange={handleChange}>
+              <select name="yearOfPassing" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Select Year Of Passing
                 </option>
@@ -230,21 +245,21 @@ export default function RegistrationForm() {
               <input
                 type="tel"
                 placeholder="Enter your phone number"
-                name="mobile"
+                name="mobileNo"
                 required
                 onChange={handleChange}
               />
             </label>
             <label className="reg-label">
               Alternate Mobile No:
-              <input type="tel" placeholder="Enter Alterante Phone number" />
+              <input type="tel" name="alternateMobileNo" onChange={handleChange} placeholder="Enter Alterante Phone number" />
             </label>
             <label className="reg-label">
               Personal Email:<span className="reg-required">*</span>
               <input
                 type="email"
                 placeholder="Enter Your Personal Email"
-                name="personalEmail"
+                name="email"
                 required
                 onChange={handleChange}
               />
@@ -335,7 +350,7 @@ export default function RegistrationForm() {
             Working Status<span  className="reg-required">*</span>
           </label>
           <div className="reg-Working_options">
-            <labe className="reg-label-1">
+            <label className="reg-label-1">
               <input
                 type="radio"
                 name="workingStatus"
@@ -345,7 +360,7 @@ export default function RegistrationForm() {
                 onChange={handleChange}
               />{" "}
               Is Working
-            </labe>
+            </label>
             <label className="reg-label-1">
               <input
                 type="radio"
@@ -385,12 +400,14 @@ export default function RegistrationForm() {
             </label>
             <label className="reg-label">
               Facebook:
-              <input type="url" placeholder="Enter you Facebook Profile Link" />
+              <input type="url" name="facebook" onChange={handleChange} placeholder="Enter you Facebook Profile Link" />
             </label>
             <label className="reg-label">
               Instagram:
               <input
                 type="url"
+                name="instagram"
+                onChange={handleChange}
                 placeholder="Enter you Instagram Profile Link"
               />
             </label>
@@ -398,6 +415,8 @@ export default function RegistrationForm() {
               Website:
               <input
                 type="url"
+                name="websites"
+                onChange={handleChange}
                 placeholder="Enter your Personal Portfolio Website "
               />
             </label>
@@ -433,11 +452,11 @@ export default function RegistrationForm() {
               <input
                 type="password"
                 placeholder="Confirm your password"
-                name="confirmpassword"
+                name="confirmPassword"
                 required
                 onChange={handleChange}
               />
-              {errors.confirmpassword && <p className="reg-error-message">{errors.confirmpassword}</p>}
+              {errors.confirmPassword && <p className="reg-error-message">{errors.confirmPassword}</p>}
             </label>
             </div>
 

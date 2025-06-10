@@ -1,0 +1,57 @@
+.team-container {
+  max-width: 1100px;
+  margin: 5% auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.team-title {
+  font-size: 36px;
+  color: var(--theme-red);
+  margin-bottom: 10px;
+}
+
+.team-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.team-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-role {
+  font-size: 15px;
+  color: #444;
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.team-branch {
+  font-size: 14px;
+  color: #777;
+}

@@ -1,0 +1,90 @@
+.alumni-container {
+  max-width: 1100px;
+  margin: 5% auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.alumni-title {
+  font-size: 36px;
+  color: var(--theme-red);
+  margin-bottom: 10px;
+}
+
+.alumni-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.alumni-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alumni-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.alumni-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.alumni-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.linkedin-btn {
+  padding: 8px 14px;
+  background-color: #0077b5;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.linkedin-btn:hover {
+  background-color: #005b91;
+}
+.alumni-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.alumni-filters input,
+.alumni-filters select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 220px;
+}
+.alumni-batch {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
