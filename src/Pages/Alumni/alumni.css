@@ -67,3 +67,24 @@
 .linkedin-btn:hover {
   background-color: #005b91;
 }
+.alumni-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.alumni-filters input,
+.alumni-filters select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 220px;
+}
+.alumni-batch {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}

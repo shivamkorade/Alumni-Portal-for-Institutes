@@ -27,6 +27,8 @@ import Career from "./Pages/Career/Career.jsx";
 import OurStory from "./Pages/OurStory/OurStory.jsx";
 import Alumni from "./Pages/Alumni/Alumni.jsx";
 import Reset from "./Pages/Reset/Reset.jsx";
+import Team from "./Pages/Team/Team.jsx";
+import Gallery from "./Pages/Gallery/Gallery.jsx";
 import { Navigate } from "react-router-dom";
 
 // Lazy Loading compoments
@@ -72,6 +74,8 @@ function App() {
             <Route path="/addmail" element={<AddEmailHistory />} />
             <Route path="/jobsearch" element={<JobSearch />} />
             <Route path="/career" element={<Career />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/alumni" element={<Alumni />} />
             <Route path="/reset/:id" element={<Reset />} />
             <Route path="/emailservice" element={<EmailDashboard />} />
