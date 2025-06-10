@@ -76,7 +76,7 @@ export default function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
+    // console.log("Form Submitted:", formData);
     handleLogin(formData); // This now does proper authentication
   };
 
