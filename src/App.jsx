@@ -96,11 +96,7 @@ function App() {
             />
 
             {/* test routes */}
-            <Route
-              path="/test"
-              element={user?.role === "Admin" ? <Test /> : <Navigate to="/" />}
-            />
-
+            <Route path="/test" element={<Test />} />
             <Route path="/loading" element={<Loading />} />
             <Route path="/addmailservice" element={<Addmailservice />} />
 

@@ -33,20 +33,11 @@ export default function Signup() {
       if (result && result.success) {
         const userData = {
           ...result.user,
-          role: result.user.accountType, // directly use backend-defined role
+          role: role,
           token: result.token,
         };
-
         login(userData);
-
-        // Redirect based on role
-        if (userData.role === "Admin") {
-          navigate("/test");
-        } else if (userData.role === "Student") {
-          navigate("/studentprofile");
-        } else {
-          navigate("/");
-        }
+        // Navigation is handled by logIn function
       }
     } catch (error) {
       // logIn function already shows toast error
