@@ -567,7 +567,7 @@ const MainPagesNavbar = () => {
               {/* Hide both options for admin */}
               {userRole === "admin" && (
                 <li>
-                  <Link to="" className="highlight no-hover">
+                  <Link to="/admindashboard" className="highlight no-hover">
                     Admin
                   </Link>
                 </li>

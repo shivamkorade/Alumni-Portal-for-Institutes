@@ -88,7 +88,8 @@ function App() {
             <Route path="/test" element={<Test />} />
             <Route path="/loading" element={<Loading />} />
             <Route path="/addmailservice" element={<Addmailservice />} />
-
+            <Route path="/admindashboard" element={<AdminDashboard />} />
+              
             {/* Protecting routes according to the user role */}
             {/* <Route
             path="/post-job"
