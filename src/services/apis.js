@@ -1,11 +1,11 @@
 export const BASE_URL = import.meta.env.VITE_BASE_URL
 
 export const authEndPoints = {
-    SIGNUP_API : "http://localhost:4000/api/v1/auth/sign-in",
-    LOGIN_API : "http://localhost:4000/api/v1/auth/login",
-    SENDOTP_API: "http://localhost:4000/api/v1/auth/sendOTP",
-    RESET_PASSWORD_TOKEN_API: "http://localhost:4000/api/v1/auth/reset-password-token",
-    RESET_PASSWORD_API: "http://localhost:4000/api/v1/auth/reset-password",
+    SIGNUP_API: BASE_URL + "/auth/sign-in",
+    LOGIN_API: BASE_URL + "/auth/login",
+    SENDOTP_API: BASE_URL + "/auth/sendOTP",
+    RESET_PASSWORD_TOKEN_API: BASE_URL + "/auth/reset-password-token",
+    RESET_PASSWORD_API: BASE_URL + "/auth/reset-password",
 }
 
 export const eventEndPoints = {

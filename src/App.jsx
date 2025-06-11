@@ -8,7 +8,7 @@ import ErrorFallback from "./ErrorFallback";
 import Layout from "./Layout/Layout.jsx";
 import AddJob from "./Pages/AddJob/Addjob.jsx";
 import Registeration from "./Pages/Registeration/Registeration.jsx";
-import Events from "./Pages/Event/Event.jsx";
+import Events from "./Pages/Events/Events.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import GuestHome from "./Pages/Home/Home.jsx";
 import "./App.css";
@@ -21,8 +21,14 @@ import AdminDashboard from "./Pages/AdminDashboard/AdminDashboard.jsx";
 import StudentDashboard from "./Pages/StudentProfile/Studentprofile.jsx";
 import Yearbook from "./Pages/Yearbook/Yearbook.jsx";
 import PendingRegistrations from "./Pages/PendingRegistration/PendingRegistrations.jsx";
+import Donation from "./Pages/Donation/Donation.jsx";
 import Database from "./Pages/Database/Database.jsx";
 import Career from "./Pages/Career/Career.jsx";
+import OurStory from "./Pages/OurStory/OurStory.jsx";
+import Alumni from "./Pages/Alumni/Alumni.jsx";
+import Reset from "./Pages/Reset/Reset.jsx";
+import Team from "./Pages/Team/Team.jsx";
+import Gallery from "./Pages/Gallery/Gallery.jsx";
 import { Navigate } from "react-router-dom";
 
 // Lazy Loading compoments
@@ -58,15 +64,20 @@ function App() {
           <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
             {/* Default Home based on User Role */}
             <Route index element={getHomeComponent()} />
-
             <Route path="/yearbook" element={<Yearbook />} />
+            <Route path="/donation" element={<Donation />} />
             <Route path="/events" element={<Events />} />
             <Route path="/post-job" element={<AddJob />} />
+            <Route path="/ourstory" element={<OurStory />} />
             <Route path="/register" element={<Registeration />} />
             <Route path="/login" element={<Login />} />
             <Route path="/addmail" element={<AddEmailHistory />} />
             <Route path="/jobsearch" element={<JobSearch />} />
             <Route path="/career" element={<Career />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/alumni" element={<Alumni />} />
+            <Route path="/reset/:id" element={<Reset />} />
             <Route path="/emailservice" element={<EmailDashboard />} />
             <Route
               path="/pendingregistration"

@@ -74,7 +74,7 @@ export const logIn = async (formData, navigate) => {
     try {
         const response = await apiConnector("POST", LOGIN_API, formData);
 
-        console.log("Login API response....", response.data.data);
+        // console.log("Login API response....", response.data.data);
 
         if(!response?.data?.success) {
             throw new Error(response?.data?.message);

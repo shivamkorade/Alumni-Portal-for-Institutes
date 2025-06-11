@@ -1,56 +1,59 @@
-import React from 'react'
-import './Studentprofile.css'
+import React, { useContext } from "react";
+import "./Studentprofile.css";
 import ProfileHeader from "../../Components/StudentprofileComp/ProfileHeader.jsx";
 import ContactInfo from "../../Components/StudentprofileComp/ContactInfo";
 import EducationCard from "../../Components/StudentprofileComp/EducationCard";
 import ExperienceCard from "../../Components/StudentprofileComp/ExperienceCard";
+import { AuthContext } from "../../Context/AuthContext.jsx";
 
 const Studentprofile = () => {
-     // Sample user data
-    const user = {
-    name: "Babdoo Raut",
-    profileImg:"/src/assets/images/profileImg.jpg",
-    course: "B.Tech. 2020 - 2019, CSE",
-    location: "Pune, Maharashtra",
-    email: "prkorade@gmail.com",
-    phone: "+91 8390208468",
-    gender: "Male",
-    regNo: "101200002",
-    address: "Span Recidency E-16 vishwakarma nagar sus Road pashan pune 411021",
+  const { user } = useContext(AuthContext);
+
+  // Sample user data
+  const userInfo = {
+    name: user.fullName,
+    profileImg: user.profilePicture,
+    course: `${user.academicDetails.course}, ${user.academicDetails.yearOfAdmission} - ${user.academicDetails.yearOfPassing}, ${user.academicDetails.stream}` ,
+    location: user.contactDetails.currentAddress,
+    email: user.email,
+    phone: user.contactDetails.mobileNo,
+    gender: user.gender,
+    regNo: user.enrollmentNo,
+    address:
+      user.contactDetails.permanentAddress,
     institute: {
       name: "PADMABHOOSHAN VASNTDADA PATIL INSTITUTE OF TECHNOLOGY, BAVDHAN",
-      img:"/src/assets/images/logo.svg",
-      duration: "B.Tech, 2020 - 2019, CSE",
+      img: "/src/assets/images/logo.svg",
+      duration: `${user.academicDetails.course}, ${user.academicDetails.yearOfAdmission} - ${user.academicDetails.yearOfPassing}, ${user.academicDetails.stream}`,
     },
     experience: {
       company: "WeAgile",
-      img:"/src/assets/images/companyImg.jpeg",
+      img: "/src/assets/images/companyImg.jpeg",
       position: "CEO",
       startDate: "Apr, 2024",
       endDate: "Present",
     },
-    linkedIn: "https://www.linkedin.com/in/babdoo-raut",
-    facebook: "https://www.facebook.com/babdoo.raut",
-    twitter: "https://twitter.com/babdoo_raut",
+    linkedIn: user.socialMediaAccounts.linkedIn,
+    facebook: user.socialMediaAccounts.facebook || `https://www.facebook.com/`,
+    twitter: user.socialMediaAccounts.instagram || `https://www.instagram.com/`,
   };
 
   return (
     <div className="stud-profile-container">
-      <ProfileHeader user={user} />
-      
+      <ProfileHeader user={userInfo} />
+
       <div className="d-flex">
         <div className="left ">
-          <ContactInfo user={user} />
+          <ContactInfo user={userInfo} />
         </div>
-        
+
         <div className="right">
-          <EducationCard institute={user.institute} />
-          <ExperienceCard experience={user.experience} />
+          <EducationCard institute={userInfo.institute} />
+          <ExperienceCard experience={userInfo.experience} />
         </div>
-        
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Studentprofile
+export default Studentprofile;

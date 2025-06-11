@@ -236,9 +236,13 @@ const MainPagesNavbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="donation" onClick={closeMenu}>
-                        Donation
+                      <Link to="alumni" onClick={closeMenu}>
+                        Alumni
                       </Link>
+                    </li>
+
+                    <li>
+                      <Link to="donation">Donation</Link>
                     </li>
                     {/* <li><Link to="chapters" onClick={closeMenu}>Chapters</Link></li>
                         <li><Link to="map" onClick={closeMenu}>Map</Link></li>*/}
@@ -266,9 +270,7 @@ const MainPagesNavbar = () => {
                     }`}
                   >
                     <li>
-                      <Link to="" onClick={closeMenu}>
-                        Events
-                      </Link>
+                      <Link to="/events">Events</Link>
                     </li>
                     {/* <li>
                       <Link to="feed" onClick={closeMenu}>
@@ -304,9 +306,7 @@ const MainPagesNavbar = () => {
                     }`}
                   >
                     <li>
-                      <Link to="ourstory" onClick={closeMenu}>
-                        Our Story
-                      </Link>
+                      <Link to="ourstory">Our Story</Link>
                     </li>
                     <li>
                       <Link to="team" onClick={closeMenu}>
@@ -451,6 +451,12 @@ const MainPagesNavbar = () => {
                   <li>
                     <Link to="yearbook">Yearbook</Link>
                   </li>
+                  <li>
+                    <Link to="alumni" onClick={closeMenu}>
+                      Alumni
+                    </Link>
+                  </li>
+
                   {/* <li>
                     <Link to="chapters">Chapters</Link>
                   </li>
@@ -485,7 +491,7 @@ const MainPagesNavbar = () => {
                     hoveredDropdown === "events" ? "show" : ""
                   }`}
                 >
-                  <Link to="">
+                  <Link to="/events">
                     <li> Events</li>
                   </Link>
                   {/* <Link to="feed">

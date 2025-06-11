@@ -44,7 +44,11 @@ body {
 
   .profileInfoWrpper {padding: 10px 90px;}
   
-  .stud-profile-img{height: 200px!important;width: auto;    margin-right: 10px;}
+  .stud-profile-img {
+    height: 200px!important;
+    width: auto;
+    margin-right: 10px;
+  }
 
   .stud-profile-img img {
  

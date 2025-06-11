@@ -4,7 +4,7 @@ import bgImg from "../../assets/images/gate_compressed.png";
 import "./admin.css";
 import { useState, useEffect } from "react";
 import Emailservice from "../Emailservice/Emailservice.jsx";
-import CreateEvent from "../Event/Event.jsx";
+import CreateEvent from "../Event/AddEvent.jsx";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import PendingRegisterations from "../PendingRegistration/PendingRegistrations.jsx";
 import Database from "../Database/Database.jsx";
