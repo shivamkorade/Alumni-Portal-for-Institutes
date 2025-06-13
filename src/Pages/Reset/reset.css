@@ -1,0 +1,47 @@
+.reset-container {
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reset-container h2 {
+  margin-bottom: 20px;
+  color: var(--theme-red);
+}
+
+.reset-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reset-form input {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.reset-form button {
+  padding: 10px;
+  background-color: var(--theme-red);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reset-form button:hover {
+  background-color: #c9302c;
+}
+
+.reset-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #d9534f;
+}
